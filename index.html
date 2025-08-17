@@ -1,30 +1,244 @@
 <!doctype html>
 <html lang="en">
+<head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kaustuv Panthi – Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <body>
-    <header>
-      <h1>Kaustuv Panthi</h1>
-      <p>Software Developer • Game Designer</p>
-      <nav>
-        <a href="#work">Work</a> · <a href="#about">About</a> · <a href="#contact">Contact</a>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaustuv Panthi • Portfolio</title>
+  <meta name="description" content="Portfolio of Kaustuv Panthi – Software Developer" />
+  <style>
+    :root {
+      --bg: #0b0b0b; --fg: #e8e8e8; --muted: #b8b8b8; --card: #151515; --accent: #5ef0a5;
+      --maxw: 980px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* Header */
+    header.site { position: sticky; top: 0; background: rgba(11,11,11,.7); backdrop-filter: blur(8px); border-bottom: 1px solid #222; z-index: 10; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .nav a { color: var(--fg); opacity: .9; }
+    .navlinks { display: flex; gap: 16px; }
+    .menu-btn { display: none; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: center; padding: 32px 0; }
+    .headshot { width: 160px; height: 160px; border-radius: 16px; background: #222 center/cover no-repeat; border: 1px solid #2a2a2a; }
+    .headshot img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+    .name { font-size: clamp(28px, 5vw, 40px); margin: 0 0 4px; }
+    .subtitle { margin: 8px 0 12px; color: var(--muted); }
+    .contact a { margin-right: 14px; }
+
+    /* Sections */
+    section { margin: 24px 0 0; }
+    section h2 { font-size: 22px; margin: 24px 0 12px; letter-spacing: .2px; }
+    .card { background: var(--card); border: 1px solid #222; border-radius: 16px; padding: 18px; }
+    .grid { display: grid; gap: 16px; }
+
+    /* Lists */
+    .list { display: grid; gap: 12px; }
+    .item h3 { margin: 0 0 4px; font-size: 18px; }
+    .item .meta { color: var(--muted); font-size: 14px; }
+    .item p { margin: 8px 0 0; }
+
+    /* Skills */
+    .skills-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .pill { display: inline-block; padding: 6px 10px; margin: 4px 6px 0 0; border: 1px solid #2b2b2b; border-radius: 999px; font-size: 14px; background: #121212; }
+
+    /* Footer */
+    footer { color: var(--muted); border-top: 1px solid #222; margin-top: 28px; padding: 18px 0 36px; }
+
+    /* Small screens */
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .navlinks { display: none; flex-direction: column; border-top: 1px solid #222; padding-top: 12px; }
+      .menu-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #2a2a2a; border-radius: 10px; background: #141414; color: var(--fg); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <div class="brand">Kaustuv Panthi</div>
+      <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+      <nav id="navlinks" class="navlinks">
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="./Kaustuv_Panthi_Resume.pdf" download>Download Résumé</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="work">
-      <h2>Selected Work</h2>
-      <section class="project">
-        <h3>Laser Tag Tag</h3>
-        <p>Collaborated with a team of four developers to design and build a multiplayer game in Unreal Engine 5 as a capstone project. Leveraged UE5's core systems to implement full remote play functionality and integrated Steam for online hosting and matchmaking <a href="#">Live</a> · <a href="#">Code</a></p>
-      </section>
-    </main>
+  <main class="wrap">
+    <!-- Hero / Intro -->
+    <section class="hero">
+      <div class="headshot" aria-label="Headshot">
+        <!-- Replace src with your own image path or URL -->
+        <img src="images/headshot.jpg" alt="Headshot of Kaustuv Panthi" onerror="this.parentElement.style.backgroundImage='url(\'https://dummyimage.com/320x320/222/aaa&text=Headshot\')'" />
+      </div>
+      <div>
+        <h1 class="name">Kaustuv Panthi</h1>
+        <p class="subtitle">Software Developer • Computer Science @ UT Austin (May 2026). Interested in systems, web, and graphics.</p>
+        <p class="contact">
+          <a href="tel:+17372408503">737‑240‑8503</a>
+          <a href="mailto:kaustuvkp@utexas.edu">kaustuvkp@utexas.edu</a>
+          <span>• Austin, TX</span>
+        </p>
+      </div>
+    </section>
 
-    <section id="about"><h2>About</h2><p>Aspiring Computer Science student at the University of Texas at Austin</p></section>
-    <section id="contact"><h2>Contact</h2><p><a href="mailto:you@example.com">you@example.com</a></p></section>
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <div class="item">
+          <h3>The University of Texas at Austin</h3>
+          <div class="meta">Bachelor of Science, Computer Science • Business Minor • May 2026 • Austin, TX</div>
+          <p><strong>Relevant Coursework:</strong> Computer Organization and Architecture, Data Structures, Discrete Math, Probability and Statistics, Machine Learning, Operating Systems, Matrices, Program Correctness and Performance, Multivariable Calculus, Game Development and Design, Object Oriented Programming, Computer Graphics, Linear Algebra</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>© <span id="y"></span> Kaustuv Panthi</footer>
-    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
-  </body>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="grid skills-cols">
+          <div>
+            <h3>Tools</h3>
+            <div>
+              <span class="pill">Linux</span>
+              <span class="pill">Microsoft Office</span>
+              <span class="pill">Code Composer</span>
+              <span class="pill">GitHub</span>
+              <span class="pill">OpenAI Prompt Engineering</span>
+              <span class="pill">Cloud Functions</span>
+              <span class="pill">PHPStorm</span>
+              <span class="pill">Visual Studio</span>
+              <span class="pill">VS Code</span>
+            </div>
+          </div>
+          <div>
+            <h3>Languages & Frameworks</h3>
+            <div>
+              <span class="pill">Java</span>
+              <span class="pill">C</span>
+              <span class="pill">C++</span>
+              <span class="pill">Python</span>
+              <span class="pill">React</span>
+              <span class="pill">HTML</span>
+              <span class="pill">PHP</span>
+              <span class="pill">C#</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">MATLAB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card item">
+          <h3>Project Seed — Head Software Developer</h3>
+          <div class="meta">Austin, TX • Sep 2024 – Present (Part‑time)</div>
+          <ul>
+            <li>Develop cognitive psychology games and maintain project websites.</li>
+            <li>Built React websites; used Python for NLP; JavaScript for game construction.</li>
+            <li>Led weekly progress meetings with professors and reported status updates.</li>
+            <li>Reconstructed a faulty React SPA used for internal lab communication.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Paycom — Software Engineering Intern</h3>
+          <div class="meta">Dallas, TX • Summer 2024, Summer 2025</div>
+          <ul>
+            <li>Built a React SPA on Paycom architecture for client employee training.</li>
+            <li>Implemented Controller‑Service‑Repository APIs with CORS in PHP & C#.</li>
+            <li>Collaborated closely with advisors to meet evolving requirements.</li>
+            <li>Contributed to a 20+ year codebase: analysis, modification, and new features.</li>
+            <li>Won 1st place at company hackathon with a React + C# inventory tracking app.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>UT Austin — EOR Data Analyst Associate</h3>
+          <div class="meta">Austin, TX • May 2021 – Aug 2021</div>
+          <ul>
+            <li>Updated and reformatted coreflood research data for the Petroleum Engineering department.</li>
+            <li>Ran Excel‑based simulations and presented status to Dr. Kishore Mohanty’s group.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card item">
+          <h3>Studia — Node.js • Python • React</h3>
+          <p>Backend for a startup that uses OpenAI/ChatGPT to create lecture content from textbook chapters using LangChain and embeddings for robust prompting. Placed top 10% in Y Combinator (Spring & Winter 2024).</p>
+        </div>
+        <div class="card item">
+          <h3>Project Assigner — C# • PHP • React</h3>
+          <p>Hackathon project at Paycom: backend that matches new hires to projects based on résumé skills; implemented authorization and CORS.</p>
+        </div>
+        <div class="card item">
+          <h3>Huffman Compression/Decompression — Java</h3>
+          <ul>
+            <li>General file compression & decompression using hash maps, priority queues, binary trees.</li>
+            <li>Implemented efficient bit‑stream I/O.</li>
+          </ul>
+        </div>
+        <div class="card item">
+          <h3>Pintos — C</h3>
+          <p>Implemented OS components: threads, virtual memory, multi‑level file system, and user program interface.</p>
+        </div>
+        <div class="card item">
+          <h3>Memory Manager — C</h3>
+          <p>Dynamic storage allocator (malloc/free). Optimized to >80% efficiency; handled 6000 ops/ms.</p>
+        </div>
+        <div class="card item">
+          <h3>Laser Tag Tag — Unreal Engine 5</h3>
+          <p>Team of five built a multiplayer UE5 game with Steam hosting/matchmaking and full remote play.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:kaustuvkp@utexas.edu">kaustuvkp@utexas.edu</a> • Phone: <a href="tel:+17372408503">737‑240‑8503</a> • Austin, TX</p>
+        <p>Feel free to reach out for opportunities in software engineering, systems, graphics, or web.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap" style="padding:0">
+        © <span id="year"></span> Kaustuv Panthi
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleMenu(){
+      const el = document.getElementById('navlinks');
+      const isShown = getComputedStyle(el).display !== 'none';
+      el.style.display = isShown ? 'none' : 'flex';
+    }
+  </script>
+</body>
 </html>
