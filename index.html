@@ -71,7 +71,7 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="./Kaustuv Panthi Resume.docx" download>Download Résumé</a>
+        <a href="./Kaustuv_Panthi_Resume.pdf" download>Download Résumé</a>
       </nav>
     </div>
   </header>
@@ -81,7 +81,7 @@
     <section class="hero">
       <div class="headshot" aria-label="Headshot">
         <!-- Replace src with your own image path or URL -->
-        <img src="./Kaustuv Panthi.jpg" alt="Headshot of Kaustuv Panthi" onerror="this.parentElement.style.backgroundImage='url(\'https://dummyimage.com/320x320/222/aaa&text=Headshot\')'" />
+        <img src="images/headshot.jpg" alt="Headshot of Kaustuv Panthi" onerror="this.parentElement.style.backgroundImage='url(\'https://dummyimage.com/320x320/222/aaa&text=Headshot\')'" />
       </div>
       <div>
         <h1 class="name">Kaustuv Panthi</h1>
@@ -152,22 +152,30 @@
           <h3>Project Seed — Head Software Developer</h3>
           <div class="meta">Austin, TX • Sep 2024 – Present (Part‑time)</div>
           <ul>
-            <li>Develop cognitive psychology games and maintain project websites.</li>
-            <li>Built React websites; used Python for NLP; JavaScript for game construction.</li>
-            <li>Led weekly progress meetings with professors and reported status updates.</li>
-            <li>Reconstructed a faulty React SPA used for internal lab communication.</li>
+            <li>Architected and maintained cognitive psychology web applications used in academic research studies.</li>
+            <li>Implemented front‑end systems with React (SPA), integrated Python NLP pipelines for language processing tasks, and developed JavaScript game logic used in experimental protocols.</li>
+            <li>Refactored and stabilized a mission‑critical React SPA for intra‑lab communication and data coordination between professors and research assistants.</li>
+            <li>Delivered iterative features and fixes under weekly sprint reviews with academic stakeholders.</li>
           </ul>
         </div>
 
         <div class="card item">
           <h3>Paycom — Software Engineering Intern</h3>
-          <div class="meta">Dallas, TX • Summer 2024, Summer 2025</div>
+          <div class="meta">Dallas, TX • Summer 2025</div>
           <ul>
-            <li>Built a React SPA on Paycom architecture for client employee training.</li>
-            <li>Implemented Controller‑Service‑Repository APIs with CORS in PHP & C#.</li>
-            <li>Collaborated closely with advisors to meet evolving requirements.</li>
-            <li>Contributed to a 20+ year codebase: analysis, modification, and new features.</li>
-            <li>Won 1st place at company hackathon with a React + C# inventory tracking app.</li>
+            <li>Secured 1st place in company hackathon by engineering a React + C# application for real‑time inventory management at client‑facing events.</li>
+            <li>Developed a React + ASP.NET Core SPA with dynamic UI components and persistent storage in MySQL.</li>
+            <li>Designed and deployed backend APIs using the Controller–Service–Repository pattern, with CORS and data exchange across PHP and C# services.</li>
+            <li>Performed large‑scale integration work across a 20+ year monolithic enterprise codebase while maintaining backward compatibility.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Paycom — Software Engineering Intern</h3>
+          <div class="meta">Dallas, TX • Summer 2024</div>
+          <ul>
+            <li>Engineered a React SPA integrated into Paycom’s enterprise stack to deliver interactive employee training modules for external client onboarding.</li>
+            <li>Implemented Controller‑Service‑Repository architecture to create backend API calls with CORS authentication in both PHP and C#.</li>
           </ul>
         </div>
 
@@ -175,8 +183,9 @@
           <h3>UT Austin — EOR Data Analyst Associate</h3>
           <div class="meta">Austin, TX • May 2021 – Aug 2021</div>
           <ul>
-            <li>Updated and reformatted coreflood research data for the Petroleum Engineering department.</li>
-            <li>Ran Excel‑based simulations and presented status to Dr. Kishore Mohanty’s group.</li>
+            <li>Transformed and standardized historical coreflood datasets for integration into modern petroleum engineering simulations.</li>
+            <li>Automated Excel workflows for EOR models and validated I/O with new experimental data.</li>
+            <li>Generated technical reports and presented results to Dr. Kishore Mohanty’s research group.</li>
           </ul>
         </div>
       </div>
@@ -188,30 +197,54 @@
       <div class="grid">
         <div class="card item">
           <h3>Studia — Node.js • Python • React</h3>
-          <p>Backend for a startup that uses OpenAI/ChatGPT to create lecture content from textbook chapters using LangChain and embeddings for robust prompting. Placed top 10% in Y Combinator (Spring & Winter 2024).</p>
-        </div>
-        <div class="card item">
-          <h3>Project Assigner — C# • PHP • React</h3>
-          <p>Hackathon project at Paycom: backend that matches new hires to projects based on résumé skills; implemented authorization and CORS.</p>
-        </div>
-        <div class="card item">
-          <h3>Huffman Compression/Decompression — Java</h3>
           <ul>
-            <li>General file compression & decompression using hash maps, priority queues, binary trees.</li>
-            <li>Implemented efficient bit‑stream I/O.</li>
+            <li>Designed and implemented backend architecture for a startup app leveraging OpenAI GPT models to generate structured lecture content from textbook chapters.</li>
+            <li>Integrated LangChain pipelines with embedding‑based retrieval to engineer prompts, parse GPT outputs, and deliver context‑aware lecture generation.</li>
+            <li>Built RESTful APIs in Node.js and optimized GPT orchestration for more consistent outputs.</li>
+            <li>Achieved top 10% placement in Y Combinator applications (Spring 2024 & Winter 2024).</li>
           </ul>
         </div>
+
+        <div class="card item">
+          <h3>Project Assigner — C# • PHP • React</h3>
+          <ul>
+            <li>Implemented backend for an internal app that matched new hires to projects using résumé parsing, skills extraction, and project metadata.</li>
+            <li>Applied layered architecture with CORS‑secured endpoints plus authN/authZ workflows.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Huffman Compression & Decompression — Java</h3>
+          <ul>
+            <li>General‑purpose compressor/decompressor implementing Huffman coding for arbitrary file types.</li>
+            <li>Managed complex data flows with HashMaps, Binary Trees, and Priority Queues for efficient symbol encoding.</li>
+            <li>Optimized bit‑level I/O streams to reduce storage and improve throughput.</li>
+          </ul>
+        </div>
+
         <div class="card item">
           <h3>Pintos — C</h3>
-          <p>Implemented OS components: threads, virtual memory, multi‑level file system, and user program interface.</p>
+          <ul>
+            <li>Implemented preemptive threading and scheduling; virtual memory with page fault handling.</li>
+            <li>Extended a multi‑level file system and syscall layer to support user program execution.</li>
+            <li>Validated robustness with concurrency stress tests and I/O workloads.</li>
+          </ul>
         </div>
+
         <div class="card item">
           <h3>Memory Manager — C</h3>
-          <p>Dynamic storage allocator (malloc/free). Optimized to >80% efficiency; handled 6000 ops/ms.</p>
+          <ul>
+            <li>Custom dynamic memory allocator (malloc/free) with block splitting, coalescing, and free‑list management.</li>
+            <li>Tuned to sustain 6000+ ops/ms with &gt;80% space utilization efficiency.</li>
+          </ul>
         </div>
+
         <div class="card item">
           <h3>Laser Tag Tag — Unreal Engine 5</h3>
-          <p>Team of five built a multiplayer UE5 game with Steam hosting/matchmaking and full remote play.</p>
+          <ul>
+            <li>Team of five built a multiplayer laser‑tag game with deterministic state sync and full remote play.</li>
+            <li>Integrated Steamworks for hosting, matchmaking, and lobby management using UE5 networking and physics.</li>
+          </ul>
         </div>
       </div>
     </section>
